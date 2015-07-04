@@ -104,7 +104,9 @@ public class UserFunctions {
 
 	public static String chkConnURL = "http://www.sanjibmaharjan.com.np";
 	public static String URL_FEED = "http://www.sanjibmaharjan.com.np/notifies/gettin.php";
+	public static String URL_FEED2 = "http://www.sanjibmaharjan.com.np/notifies/gettins.php";
 	public static String loginURL = "http://www.sanjibmaharjan.com.np/notifies/all_con.php";
+	public static String pingURL = "http://www.sanjibmaharjan.com.np/notifies/ping.php";
 	public static String picUrl = "http://www.sanjibmaharjan.com.np/notifies/images/";
 	public static String Comment_FEED = "http://www.sanjibmaharjan.com.np/notifies/gettin_comment.php";
 	public static String B_FEED = "http://www.sanjibmaharjan.com.np/notifies/gettin_bookmark.php";
@@ -205,6 +207,18 @@ public class UserFunctions {
 		params.add(new BasicNameValuePair("pid", post_id));
 		// params.add(new BasicNameValuePair("booked", booked+""));
 		JSONObject json = jsonParser.getJSONFromUrl(loginURL, "POST", params);
+		return json;
+	}
+	
+	public JSONObject processPing(String pingerId, String pingerToId) {
+		// Building Parameters
+
+		List<NameValuePair> params = new ArrayList<NameValuePair>();
+		params.add(new BasicNameValuePair("tag", "pinging"));
+		params.add(new BasicNameValuePair("pingerId", pingerId));
+		params.add(new BasicNameValuePair("pingerToId", pingerToId));
+		// params.add(new BasicNameValuePair("booked", booked+""));
+		JSONObject json = jsonParser.getJSONFromUrl(pingURL, "POST", params);
 		return json;
 	}
 
