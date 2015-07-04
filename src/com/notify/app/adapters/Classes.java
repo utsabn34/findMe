@@ -186,5 +186,39 @@ public class Classes {
 
 		}
 	}
+	
+	
+	public static class Users implements Parcelable {
+		public String id,email,firstname,lastname,username;
+
+		public Users() {
+		}
+
+		public Users(String id, String email,String firstname,String lastname,String username) {
+
+			this.id = id;
+			this.username = username;
+			this.email = email;
+			this.firstname = firstname;
+			this.lastname = lastname;
+			this.username = username;
+		}
+
+		@Override
+		public int describeContents() {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+
+		@Override
+		public void writeToParcel(Parcel dest, int flags) {
+			dest.writeString(id);
+			dest.writeString(username);
+			dest.writeString(email);
+			dest.writeString(firstname);
+			dest.writeString(lastname);
+
+		}
+	}
 
 }
