@@ -7,5 +7,9 @@
     <item
         android:id="@+id/row_addLocs"
         android:title="Add/Remove Event Location"/>
+    
+    <item
+        android:id="@+id/row_addAttendees"
+        android:title="Add Attendees"/>
 
 </menu>

@@ -129,9 +129,8 @@ public class GCMIntentService extends GCMBaseIntentService {
 		// notification.defaults |= Notification.DEFAULT_VIBRATE;
 		// notificationManager.notify(0, notification);
 		Notification myNotification;
-		final String myBlog = "http://ekbana.com/";
 		// Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(myBlog));
-		Intent notificationIntent = new Intent(context, MainListy.class);
+		Intent notificationIntent = new Intent(context, BookRoom.class);
 		// set intent so it does not start a new activity
 		notificationIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
 				| Intent.FLAG_ACTIVITY_SINGLE_TOP);

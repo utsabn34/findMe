@@ -37,6 +37,7 @@ import com.android.volley.Request.Method;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.google.android.gms.internal.lv;
 import com.notify.app.adapters.Message;
+import com.notify.app.adapters.MySQLAdapter;
 import com.notify.app.adapters.PingAdapter;
 import com.notify.app.adapters.UserFunctions;
 import com.notify.app.adapters.Classes.FeedItem;
@@ -219,7 +220,8 @@ public class ShowUsers extends SherlockFragmentActivity implements
 		if(parent.getId() == R.id.viewPing){
 			Message.message(ShowUsers.this, position+"sds");
 			PingConfirmDialog dialog = new PingConfirmDialog();
-			dialog.setValues(feedItemTemp.get(position).username+"(" +feedItemTemp.get(position).email+ ")", feedItemTemp.get(position).id, feedItemTemp.get(position).id);
+			MySQLAdapter adap = new MySQLAdapter(ShowUsers.this);
+			dialog.setValues(feedItemTemp.get(position).username+"(" +feedItemTemp.get(position).email+ ")", adap.getUser().id, feedItemTemp.get(position).id);
 			dialog.show(getSupportFragmentManager(), "pingDiaglog");
 		}
 		

@@ -48,12 +48,12 @@ public class StartUp extends Activity {
 		setContentView(R.layout.startup);
 		tv = (ShimmerTextView) findViewById(R.id.shimmer_tv);
 		tv.setTypeface(Typeface.createFromAsset(getAssets(), "ff.ttf"));
-
-		// shimmer = new Shimmer();
-		// shimmer.setDuration(2000);
-		// shimmer.setRepeatCount(0);
-		// tv.setReflectionColor(getResources().getColor(R.color.text_shadow_white));
-		// shimmer.start(tv);
+		shimmer = new Shimmer();
+		shimmer.setDuration(2400);
+		shimmer.setRepeatCount(0);
+		tv.setReflectionColor(getResources()
+				.getColor(R.color.text_shadow_white));
+		shimmer.start(tv);
 
 		adapterMy = new MySQLAdapter(this);
 

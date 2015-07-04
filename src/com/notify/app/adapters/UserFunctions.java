@@ -212,7 +212,6 @@ public class UserFunctions {
 	
 	public JSONObject processPing(String pingerId, String pingerToId) {
 		// Building Parameters
-
 		List<NameValuePair> params = new ArrayList<NameValuePair>();
 		params.add(new BasicNameValuePair("tag", "pinging"));
 		params.add(new BasicNameValuePair("pingerId", pingerId));

@@ -102,5 +102,14 @@
     <color name="error_view_text_light">#858585</color>
     <color name="error_view_retry_button_background">#30000000</color>
     <color name="error_view_retry_button_background_stroke">#50000000</color>
+    
+    <color name="lt_greenTop">#DEDDC8</color>
+    <color name="lt_greebBottom">#CBCAAB</color>
+    <color name="grey_main">#EAEADE</color>
+    <color name="grn_line">#C4C4A2</color>
+    <color name="grn_dark">#7E7E50</color>
+    <color name="grn_darkop">#417E7E50</color>
+    <color name="trysss">#CBCAAB</color>
+    <color name="ltgreens">#7E7E50</color>
 
 </resources>

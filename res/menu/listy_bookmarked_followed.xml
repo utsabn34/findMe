@@ -13,4 +13,5 @@
 		  android:id="@+id/row_follow" />
 	<item android:title="Report Notification"
 		  android:id="@+id/row_report" />
+	
 </menu>

@@ -29,7 +29,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"
                 android:gravity="left|center_vertical"
-                android:text="New Notify"
+                android:text="New Event"
                 android:textColor="@color/theme_"
                 android:textSize="18sp" />
 
