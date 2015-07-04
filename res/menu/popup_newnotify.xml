@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/row_addDate"
+        android:title="Add/Remove Date:Time"/>
+    <item
+        android:id="@+id/row_addLocs"
+        android:title="Add/Remove Event Location"/>
+    
+    <item
+        android:id="@+id/row_addAttendees"
+        android:title="Add Attendees"/>
+
+</menu>

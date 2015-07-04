@@ -1,12 +1,16 @@
 package com.notify.app.signups;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import android.widget.TextView;
 
 /**
  * Form Validation Class
  * <p/>
- * Immediately, utonly works with EditText
+ * Immediately, only works with EditText
  * 
- * @author Utsab Neupane
+ * @author throrin19
  * @version 1.0
  */
 public class Form {
@@ -38,23 +42,25 @@ public class Form {
 	}
 
 	/**
-	 * Called to validate our form. If an error is found, it will be displayed in the corresponding field.
+	 * Called to validate our form.
+	 * If an error is found, it will be displayed in the corresponding field.
 	 * 
 	 * @return boolean true if the form is valid, otherwise false
 	 */
 	public boolean validate() {
 		boolean formValid = true;
 		for (AbstractValidate validate : mValidates) {
-			formValid = formValid & validate.isValid(); // Use & in order to evaluate both side of the operation.
+			formValid = formValid & validate.isValid();	// Use & in order to evaluate both side of the operation.
 		}
 		return formValid;
 	}
 
 	/**
-	 * Closes the error popup of the text view. A little useless due to ability to just call source.setError(null), but added anyways
+	 * Closes the error popup of the text view.
+	 * A little useless due to ability to just call source.setError(null), but added anyways
 	 * 
 	 * @param sourceTextView
-	 * @author Satish Gupta
+	 * @author Dixon D'Cunha (Exikle)
 	 */
 	public void closeError(TextView sourceTextView) {
 		for (AbstractValidate av : mValidates) {
@@ -67,7 +73,7 @@ public class Form {
 	/**
 	 * Closes all error pop ups that were created by validator
 	 * 
-	 * @author Satish Gupta
+	 * @author Dixon D'Cunha (Exikle)
 	 */
 	public void closeAllErrors() {
 		for (AbstractValidate av : mValidates) {

@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:fadingEdge="none"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_1"
+            android:gravity="left|center_vertical"
+            android:padding="5dp"
+            android:text="GENERAL SETTINGS"
+            android:textColor="@color/theme_"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <com.notify.app.adapters.CheckBox
+                android:id="@+id/cBNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textColor="@color/cool_black" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:text="Enable Notifications"
+                android:textColor="@color/theme_txtclr"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_1"
+            android:gravity="left|center_vertical"
+            android:padding="5dp"
+            android:text="PROFILE SETTINGS"
+            android:textColor="@color/theme_"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp" >
+
+            <ImageButton
+                android:id="@+id/butproSett"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/rounded_corners"
+                android:src="@drawable/ic_action_overflow" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignBottom="@+id/ivPhotoChange"
+                android:layout_marginBottom="-11dp"
+                android:background="@color/theme_" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_corners_grn"
+                android:padding="3dp"
+                android:src="@drawable/no_pic" />
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/ivPhotoChange"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="13dp"
+                android:scaleType="fitCenter" >
+            </com.android.volley.toolbox.NetworkImageView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tVSet_uname"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/right_round"
+                android:gravity="right|center_vertical"
+                android:paddingRight="10dp"
+                android:text="USER NAME"
+                android:textColor="@color/text_shadow_white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/etSet_uname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:text="---"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tVSet_email"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/right_round"
+                android:gravity="right|center_vertical"
+                android:paddingRight="10dp"
+                android:text="EMAIL"
+                android:textColor="@color/text_shadow_white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/etSet_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:text="---"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tVSet_fname"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/right_round"
+                android:gravity="right|center_vertical"
+                android:paddingRight="10dp"
+                android:text="FIRST NAME"
+                android:textColor="@color/text_shadow_white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/etSet_fname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:text="Sanjib"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tVSet_lname"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/right_round"
+                android:gravity="right|center_vertical"
+                android:paddingRight="10dp"
+                android:text="LAST NAME"
+                android:textColor="@color/text_shadow_white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/etSet_lname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:text="---"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tVSet_country"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/right_round"
+                android:gravity="right|center_vertical"
+                android:paddingRight="10dp"
+                android:text="COUNTRY"
+                android:textColor="@color/text_shadow_white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/etSet_country"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:text="---"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tVSet_city"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/right_round"
+                android:gravity="right|center_vertical"
+                android:paddingRight="10dp"
+                android:text="CITY"
+                android:textColor="@color/text_shadow_white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/etSet_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:text="---"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tVSet_dob"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/right_round"
+                android:gravity="right|center_vertical"
+                android:paddingRight="10dp"
+                android:text="DOB"
+                android:textColor="@color/text_shadow_white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/etSet_dob"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:text="---"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tVSet_joined"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/right_round"
+                android:gravity="right|center_vertical"
+                android:paddingRight="10dp"
+                android:text="JOINED NOTIFY"
+                android:textColor="@color/text_shadow_white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/etSet_joined"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:text="---"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

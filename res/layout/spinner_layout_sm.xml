@@ -1,0 +1,13 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/textViewSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:padding="3dp"
+        android:background="@drawable/rounded_edittext"
+        android:gravity="left|center_vertical"
+        android:maxLines="1"
+        android:textColor="@color/theme_txtclr"
+        android:scrollHorizontally="true"
+        android:drawableRight="@drawable/ics_spinner"
+        android:text="TextView" />

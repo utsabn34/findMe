@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/lllNotiAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:paddingBottom="20dp" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corners"
+                android:paddingBottom="35dp" >
+
+                <TextView
+                    android:id="@+id/tvMessAddC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:text="Add/Change Picture"
+                    android:textColor="@color/theme_"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/ivPhotoAddC"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/tvMessAddC"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_corners_grn"
+                    android:padding="3dp"
+                    android:src="@drawable/no_pic" />
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/nvPhotoAddC"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_below="@id/tvMessAddC"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="13dp"
+                    android:scaleType="fitCenter" >
+                </com.android.volley.toolbox.NetworkImageView>
+
+                <Button
+                    android:id="@+id/butCamAddC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvMessAddC"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/ivPhotoAddC"
+                    android:background="@drawable/stroked_selector"
+                    android:text="From Camera" />
+
+                <Button
+                    android:id="@+id/butGalAddC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/butCamAddC"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/ivPhotoAddC"
+                    android:background="@drawable/stroked_selector"
+                    android:text="From Gallery" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@id/lllNotiAdd"
+        android:layout_centerHorizontal="true" >
+
+        <Button
+            android:id="@+id/butYesAddC"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/btn_selector"
+            android:text="Add/Change"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/butNoAddC"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/btn_selector"
+            android:text="Cancel"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</RelativeLayout>

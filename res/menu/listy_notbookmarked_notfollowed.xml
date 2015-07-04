@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<item android:title="Bookmark"
+		  android:id="@+id/row_mark" />
+
+	<item android:title="Hide from my notify"
+		  android:id="@+id/row_block" />
+	<item android:title="Share this"
+		  android:id="@+id/row_share" />
+	<item android:title="Follow this User"
+		  android:id="@+id/row_follow" />
+	<item android:title="Report Notification"
+		  android:id="@+id/row_report" />
+</menu>

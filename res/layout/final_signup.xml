@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_edittext"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/topdf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Final Confirmation"
+        android:textColor="@color/theme_"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/linn"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/topdf"
+        android:background="@color/theme_color"
+        android:orientation="horizontal" />
+
+    <ImageView
+        android:id="@+id/imageVww"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linn"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_spinners"
+        android:gravity="left"
+        android:padding="4dp"
+        android:textSize="14sp" />
+
+    
+
+    <ListView
+        android:id="@+id/lVDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageVww"
+        android:divider="@color/theme_color"
+        android:dividerHeight="1dp"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent"
+        android:paddingBottom="49dp" />
+
+    <LinearLayout
+        android:id="@+id/iddd"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignTop="@+id/lsis"
+        android:background="@color/theme_color"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:id="@+id/lsis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/lVDetails"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnCancelSUP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/buttnselector_left"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="Cancel" />
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/theme_color" />
+
+        <Button
+            android:id="@+id/btnOkSUP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/buttnselector"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="Ok"
+            android:textColor="@color/theme_" />
+    </LinearLayout>
+
+</RelativeLayout>

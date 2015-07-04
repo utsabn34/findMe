@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.notify.app"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/theme_"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/ibtags_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/trans_selector"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:src="@drawable/ic_action_back" />
+
+        <TextView
+            android:id="@+id/tvTitletoptags"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="FindMe"
+            android:textColor="@color/text_shadow_white"
+            android:textSize="30sp" />
+
+        <ImageButton
+            android:id="@+id/ib_viewprofileasas"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/btn_dark_selector"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:src="@drawable/ics_user_white" />
+
+        <ImageButton
+            android:id="@+id/ib_addnewpostassa"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_dark_selector"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:src="@drawable/ics_pluswhite" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/heds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical" />
+
+        <com.notify.app.adapters.PagerSlidingTabStrip
+            android:id="@+id/tabStrip"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-3dp"
+            android:background="@color/white"
+            android:paddingBottom="2dp"
+            android:textColor="@color/text_shadow_white"
+            app:pstsDividerColor="@android:color/transparent"
+            app:pstsDividerPadding="20dp"
+            app:pstsIndicatorColor="@color/theme_"
+            app:pstsIndicatorHeight="0dp"
+            app:pstsShouldExpand="true"
+            app:pstsUnderlineHeight="0dp" />
+
+        <android.support.v4.view.ViewPager
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/main_pager"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tabStrip"
+            android:layout_below="@+id/heds" >
+        </android.support.v4.view.ViewPager>
+
+        <LinearLayout
+            android:id="@+id/simpLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignTop="@id/tabStrip"
+            android:background="@color/theme_"
+            android:orientation="horizontal" />
+    </RelativeLayout>
+
+</LinearLayout>
