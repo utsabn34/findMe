@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_grey"
+        android:padding="5dp" >
+
+        <LinearLayout
+            android:id="@+id/layTexx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textsem"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="Report this post"
+                android:textColor="@color/theme_"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textloadd_rep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layTexx"
+            android:gravity="center"
+            android:paddingBottom="25dp"
+            android:paddingTop="25dp"
+            android:text="loading....."
+            android:textColor="@color/theme_txtclr"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:id="@+id/scroool_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textloadd_rep"
+            android:fadingEdge="none" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <TextView
+                    android:id="@+id/tv_pstdesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/theme_txtclr"
+                    android:textSize="12sp"
+                    android:text="Post:jhj hg jgbj jhj gjg" />
+
+                <EditText
+                    android:id="@+id/etDett_report"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/tv_pstdesc"
+                    android:background="@drawable/rounded_edittext"
+                    android:gravity="top"
+                    android:hint="Write the report here"
+                    android:minLines="5"
+                    android:padding="8dp"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/reportNotify"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/etDett_report"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/btn_selector"
+                    android:gravity="center"
+                    android:text="Report"
+                    android:textColor="@color/text_shadow_white"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/circle" />
+
+        <View
+            android:id="@+id/cancel_report"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/circle_grey" />
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ics_cross_grn" />
+    </RelativeLayout>
+
+</RelativeLayout>

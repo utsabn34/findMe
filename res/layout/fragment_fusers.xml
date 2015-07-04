@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <TextView
+        android:id="@+id/tvNoFUsers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layPb_FUsers"
+        android:gravity="center"
+        android:text="No followed users"
+        android:textColor="@color/theme_"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/list_FUsers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvNoFUsers"
+        android:cacheColorHint="#00000000"
+        android:divider="#19000000"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true" >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+    <RelativeLayout
+        android:id="@+id/layPb_FUsers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:gravity="center"
+            android:visibility="gone"
+            android:id="@+id/layerrConn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/img_cloud" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="Oops! No Internet Detected."
+                android:textColor="@color/theme_txtclr"
+                android:textStyle="bold" />
+
+            <com.notify.app.adapters.RippleView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="80dp"
+                ripple:rv_centered="true"
+                ripple:rv_color="@color/themed_"
+                ripple:rv_rippleDuration="400"
+                ripple:rv_type="simpleRipple"
+                ripple:rv_zoom="true"
+                ripple:rv_zoomScale="0.9" >
+
+                <TextView
+                    android:id="@+id/butAgainTryFUsers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_green_unselect"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="30dp"
+                    android:paddingLeft="30dp"
+                    android:text="Try Again"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </com.notify.app.adapters.RippleView>
+        </LinearLayout>
+
+        <com.notify.app.adapters.ProgressBarCircularIndetermininate
+            android:id="@+id/pBFUsers"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_centerInParent="true"
+            android:background="@color/themed_" />
+    </RelativeLayout>
+
+</RelativeLayout>

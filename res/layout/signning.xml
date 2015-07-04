@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/to_round_stroke_selector"
+    android:gravity="center"
+    android:layout_margin="10dp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/topdf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Signing Up...."
+        android:textColor="@color/theme_color"
+        android:textSize="18sp" />
+
+  
+
+    <TextView
+        android:id="@+id/tVMessssss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topdf"
+        android:background="@color/text_shadow_white"
+        android:gravity="center"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:layout_margin="3dp"
+        android:text="Upload a Photo(Not necessary)"
+        android:textColor="@color/theme_"
+        android:textSize="14sp" />
+
+</RelativeLayout>

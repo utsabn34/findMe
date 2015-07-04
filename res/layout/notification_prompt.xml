@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/lllNoti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:paddingBottom="20dp" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corners"
+                android:paddingBottom="35dp" >
+
+                <TextView
+                    android:id="@+id/tvNotiMess"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:text="Do you want to set notification?Do you really"
+                    android:textColor="@color/theme_"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rGTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvNotiMess"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp" >
+
+                    <RadioButton
+                        android:id="@+id/rBSame"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/top_roundwhite"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="40dp"
+                        android:paddingTop="10dp"
+                        android:text="Exactly at the same time" />
+
+                    <RadioButton
+                        android:id="@+id/rB30"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/backwhite_greystroked"
+                        android:checked="true"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="40dp"
+                        android:paddingTop="10dp"
+                        android:text="Before 30 mins" />
+
+                    <RadioButton
+                        android:id="@+id/rB1hr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/down_rounded_stroked"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="40dp"
+                        android:paddingTop="10dp"
+                        android:text="Before 1 hour" />
+                </RadioGroup>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@id/lllNoti"
+        android:layout_centerHorizontal="true" >
+
+        <Button
+            android:id="@+id/butYesNoti"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/btn_selector"
+            android:text="Set"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/butNoNoti"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/btn_selector"
+            android:text="Cancel"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</RelativeLayout>

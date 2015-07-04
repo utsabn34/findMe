@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants" >
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_corners_grn"
+        android:padding="3dp"
+        android:src="@drawable/no_pic" />
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/ivPhoto"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="13dp"
+        android:scaleType="fitCenter" >
+    </com.android.volley.toolbox.NetworkImageView>
+
+    <RelativeLayout
+        android:id="@+id/relitems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/ivPhoto"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/tVTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/ivoverFlow"
+            android:maxLines="2"
+            android:scrollHorizontally="true"
+            android:text="Notice about the n"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/ivoverFlow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/trans_selector"
+            android:src="@drawable/ic_action_overflow" />
+
+        <TextView
+            android:id="@+id/tVTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/tVTitle"
+            android:layout_toLeftOf="@id/ivoverFlow"
+            android:text="1 hour ago"
+            android:textColor="@color/theme_txtclr"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tVContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tVTimer"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_corner_stroked"
+            android:padding="10dp"
+            android:text="There has been certain announcement about the change of the loadshedding schedule.As we are all aware of the recent news about the....."
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tVposted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tVContent"
+            android:shadowColor="@color/text_shadow_white"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:text="Posted By:gfgjgjggjhgjg"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/relitems"
+        android:background="@color/grey_lis_tw" />
+
+</RelativeLayout>
