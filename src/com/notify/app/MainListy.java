@@ -137,7 +137,7 @@ public class MainListy extends SherlockFragmentActivity implements
 	ListView actualListView;
 	ProgressBarCircularIndetermininate pb;
 	TextView tvTitle;
-	ImageButton ib_overflow, ib_user_settings, ib_newNOtify;
+	ImageButton ib_overflow, ib_user_settings, ib_newNOtify, ibFindMe;
 	FragmentManager fm;
 	// The data to be displayed in the ListView
 	boolean isRel, isbut;
@@ -183,6 +183,7 @@ public class MainListy extends SherlockFragmentActivity implements
 		ib_overflow = (ImageButton) findViewById(R.id.ib_overflow);
 		ib_user_settings = (ImageButton) findViewById(R.id.ib_viewprofile);
 		ib_newNOtify = (ImageButton) findViewById(R.id.ib_addnewpost);
+		ibFindMe = (ImageButton) findViewById(R.id.ib_findme);
 		ib_newNOtify.setOnClickListener(this);
 		bar = (RelativeLayout) findViewById(R.id.layPb);
 		pb = (ProgressBarCircularIndetermininate) findViewById(R.id.pB);
@@ -192,6 +193,7 @@ public class MainListy extends SherlockFragmentActivity implements
 
 		ib_overflow.setOnClickListener(this);
 		ib_user_settings.setOnClickListener(this);
+		ibFindMe.setOnClickListener(this);
 		butAgain.setOnClickListener(this);
 		// Set a listener to be invoked when the list should be refreshed.
 		listy.setOnRefreshListener(new OnRefreshListener<ListView>() {
@@ -483,6 +485,9 @@ public class MainListy extends SherlockFragmentActivity implements
 		} else if (v.getId() == R.id.ib_addnewpost) {
 			New_Notify newNoti = new New_Notify();
 			newNoti.show(fm, "newwwwNotiss");
+		}else if (v.getId() == R.id.ib_findme) {
+			Intent i = new Intent(MainListy.this, ShowUsers.class);
+			startActivity(i);
 		}
 
 	}
